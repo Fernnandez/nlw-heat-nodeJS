@@ -12,8 +12,6 @@ class CreateTagService {
 
 		const tagAlreadyExists = await tagsRepository.findOne({ name });
 
-		console.log(tagAlreadyExists);
-
 		if (tagAlreadyExists) {
 			throw new Error("Tag name already exists!");
 		}
